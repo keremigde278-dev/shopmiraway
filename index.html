@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopMiraway ist eine Berliner Webdesign-Agentur für massgeschneiderte Webseiten, die verkaufen. Bestes Preis-Leistungs-Verhältnis auf dem Markt." />
+  <title>ShopMiraway — Webseiten, die verkaufen.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo">
+        <img src="5BA108F9-74DB-48A1-9A3C-9D4FD11CDBD8 (1).PNG" alt="" class="nav-logo-img" />
+        ShopMiraway<span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services" class="lang-de">Leistungen</a><a href="#services" class="lang-en">Services</a></li>
+        <li><a href="#pricing"  class="lang-de">Preise</a><a href="#pricing" class="lang-en">Pricing</a></li>
+        <li><a href="#about"    class="lang-de">Über uns</a><a href="#about" class="lang-en">About</a></li>
+        <li><a href="#faq"      class="lang-de">FAQ</a><a href="#faq" class="lang-en">FAQ</a></li>
+        <li><a href="#contact"  class="lang-de">Kontakt</a><a href="#contact" class="lang-en">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="lang-de-btn" onclick="setLang('de')">DE</button>
+          <button class="lang-btn"        id="lang-en-btn" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-primary nav-cta lang-de">Jetzt anfragen</a>
+        <a href="#contact" class="btn btn-primary nav-cta lang-en">Get in touch</a>
+      </div>
+
+      <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="mobile-menu">
+      <a href="#services" onclick="toggleMobile()"><span class="lang-de">Leistungen</span><span class="lang-en">Services</span></a>
+      <a href="#pricing"  onclick="toggleMobile()"><span class="lang-de">Preise</span><span class="lang-en">Pricing</span></a>
+      <a href="#about"    onclick="toggleMobile()"><span class="lang-de">Über uns</span><span class="lang-en">About</span></a>
+      <a href="#faq"      onclick="toggleMobile()">FAQ</a>
+      <a href="#contact"  onclick="toggleMobile()"><span class="lang-de">Kontakt</span><span class="lang-en">Contact</span></a>
+      <div class="lang-toggle" style="margin-top:8px;">
+        <button class="lang-btn" id="lang-de-btn-m" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" id="lang-en-btn-m" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary mobile-cta" onclick="toggleMobile()">
+        <span class="lang-de">Jetzt anfragen</span><span class="lang-en">Get in touch</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-grid" id="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span class="lang-de">Berliner Web-Agentur · Seit 2023</span>
+          <span class="lang-en">Berlin Web Agency · Since 2023</span>
+        </div>
+
+        <h1 class="hero-headline">
+          <span class="lang-de">Webseiten,<br>die <span class="gradient-text">verkaufen.</span></span>
+          <span class="lang-en">Websites<br>that <span class="gradient-text">convert.</span></span>
+        </h1>
+
+        <p class="hero-sub lang-de">
+          Wir bauen keine generischen Templates, sondern massgeschneiderte digitale Erfahrungen mit Liebe zum Detail, die Kunden gewinnen und Umsatz generieren.
+        </p>
+        <p class="hero-sub lang-en">
+          We don't build generic templates. We craft bespoke digital experiences with obsessive attention to detail, designed to win customers and drive revenue.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            <span class="lang-de">Projekt starten</span>
+            <span class="lang-en">Start your project</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#services" class="btn btn-outline-light">
+            <span class="lang-de">Leistungen ansehen</span>
+            <span class="lang-en">View services</span>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <span class="check">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="lang-de">Beste Preis-Leistung</span>
+            <span class="lang-en">Best value</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="check">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="lang-de">100% massgeschneidert</span>
+            <span class="lang-en">100% custom built</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="check">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="lang-de">Schnelle Lieferung</span>
+            <span class="lang-en">Fast delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-mockup">
+          <div class="mockup-browser">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <div class="mockup-dot"></div>
+                <div class="mockup-dot"></div>
+                <div class="mockup-dot"></div>
+              </div>
+              <div class="mockup-url">shopmiraway.de</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-hero-block">
+                <div class="mockup-line" style="width:80%"></div>
+                <div class="mockup-line short"></div>
+                <div class="mockup-line shorter"></div>
+                <div class="mockup-btn-mock"></div>
+              </div>
+              <div class="mockup-cards">
+                <div class="mockup-card">
+                  <div class="mockup-card-dot"></div>
+                  <div class="mockup-card-line w60"></div>
+                  <div class="mockup-card-line w40"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-dot" style="background:var(--accent)"></div>
+                  <div class="mockup-card-line w60"></div>
+                  <div class="mockup-card-line w40"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-dot" style="background:#B8B4FF"></div>
+                  <div class="mockup-card-line w60"></div>
+                  <div class="mockup-card-line w40"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mockup-badge badge-top-right">
+            <div class="mockup-badge-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <div class="badge-title">Core Web Vitals</div>
+              <div class="badge-sub">98 / 100 Performance</div>
+            </div>
+          </div>
+
+          <div class="mockup-badge badge-bottom-left">
+            <div class="mockup-badge-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div>
+              <div class="badge-title">Conversion Rate</div>
+              <div class="badge-sub">+340% nach Launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-text lang-de">Scroll</div>
+    <div class="scroll-text lang-en">Scroll</div>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     STATS
+════════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="47">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label lang-de">Abgeschlossene Projekte</div>
+        <div class="stat-label lang-en">Completed Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label lang-de">Kundenzufriedenheit</div>
+        <div class="stat-label lang-en">Client Satisfaction</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="14">0</span><span class="stat-suffix" style="font-size:0.55em;padding-bottom:5px;align-self:flex-end"> Tage</span></div>
+        <div class="stat-label lang-de">Durchschnittliche Lieferzeit</div>
+        <div class="stat-label lang-en">Average Delivery Time</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="3">0</span><span class="stat-suffix">x</span></div>
+        <div class="stat-label lang-de">Mehr Conversions im Schnitt</div>
+        <div class="stat-label lang-en">Average Conversion Lift</div>
+      </div>
+    </div>
+
+    <p class="stats-trust reveal reveal-delay-2">
+      <span class="lang-de"><strong>Echte Ergebnisse.</strong> Keine Agentur-Floskeln. Unsere Arbeit spricht für sich.</span>
+      <span class="lang-en"><strong>Real results.</strong> No agency fluff. Our work speaks for itself.</span>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     LEISTUNGEN
+════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+
+    <div class="services-header">
+      <div class="reveal">
+        <div class="section-label lang-de">Leistungen</div>
+        <div class="section-label lang-en">Services</div>
+        <h2 class="section-title lang-de">Alles, was deine<br><span>Webseite braucht.</span></h2>
+        <h2 class="section-title lang-en">Everything your<br><span>website needs.</span></h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-sub lang-de">Von der ersten Skizze bis zum Live-Launch übernehmen wir Design, Entwicklung und Optimierung. Massgeschneidert für dein Business, nicht von der Stange.</p>
+        <p class="section-sub lang-en">From the first sketch to live launch we handle design, development, and optimization. Tailored for your business, not off the shelf.</p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-tag">UI/UX</div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <div class="service-name lang-de">Webdesign</div>
+        <div class="service-name lang-en">Web Design</div>
+        <p class="service-desc lang-de">Visuell starke, markengerechte Designs, die Besucher sofort überzeugen und zum Handeln bewegen. Kein Template-Look, jeder Pixel mit Absicht gesetzt.</p>
+        <p class="service-desc lang-en">Visually powerful, brand-aligned designs that captivate visitors instantly and drive action. No template aesthetics, every pixel intentional.</p>
+        <div class="service-features">
+          <div class="service-feature"><span class="lang-de">Benutzerdefiniertes UI/UX-Design</span><span class="lang-en">Custom UI/UX design</span></div>
+          <div class="service-feature"><span class="lang-de">Mobile-First Responsive</span><span class="lang-en">Mobile-first responsive</span></div>
+          <div class="service-feature"><span class="lang-de">Figma-Prototyp inklusive</span><span class="lang-en">Figma prototype included</span></div>
+          <div class="service-feature"><span class="lang-de">Markenkonsistenz</span><span class="lang-en">Brand consistency</span></div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-tag">Code</div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="service-name lang-de">Webentwicklung</div>
+        <div class="service-name lang-en">Web Development</div>
+        <p class="service-desc lang-de">Sauberer, schneller und wartbarer Code. Wir liefern pixelgenaue Umsetzungen mit optimaler Performance, ohne aufgeblasenen Page-Builder-Code.</p>
+        <p class="service-desc lang-en">Clean, fast, and maintainable code. Pixel-perfect builds with optimal performance, without bloated page-builder code.</p>
+        <div class="service-features">
+          <div class="service-feature">HTML5, CSS3, JavaScript</div>
+          <div class="service-feature"><span class="lang-de">Core Web Vitals optimiert</span><span class="lang-en">Core Web Vitals optimized</span></div>
+          <div class="service-feature"><span class="lang-de">SEO-technisch sauber</span><span class="lang-en">Technically clean SEO</span></div>
+          <div class="service-feature"><span class="lang-de">CMS-Integration möglich</span><span class="lang-en">CMS integration available</span></div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-tag lang-de">Conversions</div>
+        <div class="service-tag lang-en">Conversions</div>
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <div class="service-name">Landing Pages</div>
+        <p class="service-desc lang-de">Auf maximale Conversions ausgelegte Seiten. Jedes Element, Headline, CTA und Struktur ist datengetrieben gestaltet, um aus Besuchern Kunden zu machen.</p>
+        <p class="service-desc lang-en">Pages engineered for maximum conversions. Every element, headline, CTA, and structure is data-driven to turn visitors into customers.</p>
+        <div class="service-features">
+          <div class="service-feature"><span class="lang-de">Conversion-optimiertes Design</span><span class="lang-en">Conversion-optimized design</span></div>
+          <div class="service-feature"><span class="lang-de">A/B-Test-bereit</span><span class="lang-en">A/B test ready</span></div>
+          <div class="service-feature"><span class="lang-de">Tracking und Analytics Setup</span><span class="lang-en">Tracking and analytics setup</span></div>
+          <div class="service-feature"><span class="lang-de">Schnelle Go-Live-Zeit</span><span class="lang-en">Fast go-live time</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     UEBER UNS / CEO
+════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+
+      <div class="reveal">
+        <div class="about-label lang-de">Über ShopMiraway</div>
+        <div class="about-label lang-en">About ShopMiraway</div>
+        <h2 class="about-title lang-de">Qualität, die<br><span>überzeugt.</span></h2>
+        <h2 class="about-title lang-en">Quality that<br><span>speaks volumes.</span></h2>
+        <p class="about-text lang-de">ShopMiraway entstand aus einer einfachen Überzeugung: Jedes Unternehmen verdient eine Webseite, die wirklich funktioniert, nicht nur gut aussieht. Wir setzen auf kompromisslose Qualität bei fairem Preis.</p>
+        <p class="about-text lang-de">Wir sind keine 50-köpfige Agentur mit Overhead, den am Ende du bezahlst. Wir sind ein fokussiertes Team, das direkt mit dir arbeitet und sich für jedes Projekt zu 100% einsetzt.</p>
+        <p class="about-text lang-en">ShopMiraway was born from a simple belief: every business deserves a website that actually works, not just looks good. We deliver uncompromising quality at a fair price.</p>
+        <p class="about-text lang-en">We're not a 50-person agency with overhead that you end up paying for. We're a focused team that works directly with you and commits 100% to every project.</p>
+
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title lang-de">Effizienz ohne Kompromisse</div>
+              <div class="about-value-title lang-en">Efficiency without compromise</div>
+              <div class="about-value-text lang-de">Schnell. Präzise. Auf den Punkt, ohne auf Qualität zu verzichten.</div>
+              <div class="about-value-text lang-en">Fast. Precise. To the point, without sacrificing quality.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title lang-de">Ehrlichkeit über Verkauf</div>
+              <div class="about-value-title lang-en">Honesty over sales</div>
+              <div class="about-value-text lang-de">Wir sagen dir, was du brauchst, nicht was uns den höchsten Auftrag bringt.</div>
+              <div class="about-value-text lang-en">We tell you what you need, not what gets us the biggest contract.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title lang-de">Ergebnisse statt Ausreden</div>
+              <div class="about-value-title lang-en">Results, not excuses</div>
+              <div class="about-value-text lang-de">Wir liefern. Pünktlich, vollständig, auf höchstem Niveau.</div>
+              <div class="about-value-text lang-en">We deliver. On time, complete, at the highest level.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ceo-card reveal reveal-delay-2">
+        <div class="ceo-avatar">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M18 4 L32 18 L18 32 L4 18 Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <path d="M18 11 L25 18 L18 25 L11 18 Z" fill="rgba(255,255,255,0.12)"/>
+          </svg>
+        </div>
+        <div class="ceo-title">CEO &amp; Creative Director</div>
+        <div class="ceo-name">ShopMiraway</div>
+        <div class="ceo-quote lang-de">
+          "Ich glaube daran, dass Webdesign keine Kunst um der Kunst willen ist. Es ist ein Werkzeug, das schärfste Werkzeug, das ein Business haben kann. Jede Webseite, die wir bauen, muss messbar etwas bewegen. Alles andere ist Dekoration."
+        </div>
+        <div class="ceo-quote lang-en">
+          "I believe web design is not art for art's sake. It's a tool, the sharpest tool a business can have. Every website we build must measurably move something. Everything else is decoration."
+        </div>
+        <div class="ceo-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="lang-de">Berlin, Deutschland</span>
+          <span class="lang-en">Berlin, Germany</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     PREISE
+════════════════════════════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+
+    <div class="pricing-header reveal">
+      <div class="section-label lang-de">Preispakete</div>
+      <div class="section-label lang-en">Pricing</div>
+      <h2 class="section-title lang-de">Transparent. Fair. <span>Unschlagbar.</span></h2>
+      <h2 class="section-title lang-en">Transparent. Fair. <span>Unbeatable.</span></h2>
+      <p class="section-sub lang-de">Keine versteckten Kosten. Keine Überraschungen. Du weisst von Anfang an, was du bekommst.</p>
+      <p class="section-sub lang-en">No hidden costs. No surprises. You know exactly what you get from day one.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-name lang-de">Einstieg</div>
+        <div class="pricing-name lang-en">Entry</div>
+        <div class="pricing-price">
+          <span class="lang-de" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Preis auf Anfrage</span>
+          <span class="lang-en" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Custom Pricing</span>
+        </div>
+        <p class="pricing-desc lang-de">Ideal für Einzelpersonen, Selbständige und kleine Unternehmen, die professionell im Web auftreten wollen.</p>
+        <p class="pricing-desc lang-en">Ideal for individuals, freelancers, and small businesses who want a professional web presence.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">1-seitige Webseite (Landingpage)</span><span class="lang-en">1-page website (landing page)</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Mobil-optimiertes Design</span><span class="lang-en">Mobile-optimized design</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Kontaktformular</span><span class="lang-en">Contact form</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Basis-SEO-Setup</span><span class="lang-en">Basic SEO setup</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Lieferung in 7 bis 14 Tagen</span><span class="lang-en">Delivery in 7 to 14 days</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline pricing-cta"><span class="lang-de">Jetzt anfragen</span><span class="lang-en">Get started</span></a>
+      </div>
+
+      <div class="pricing-card featured reveal reveal-delay-2">
+        <div class="pricing-badge lang-de">Empfohlen</div>
+        <div class="pricing-badge lang-en">Recommended</div>
+        <div class="pricing-tier">Growth</div>
+        <div class="pricing-name">Growth</div>
+        <div class="pricing-price">
+          <span class="lang-de" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Preis auf Anfrage</span>
+          <span class="lang-en" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Custom Pricing</span>
+        </div>
+        <p class="pricing-desc lang-de">Für wachsende Unternehmen mit ambitionierten Zielen. Mehrere Seiten, starke Conversions, volle Markenpräsenz.</p>
+        <p class="pricing-desc lang-en">For growing businesses with ambitious goals. Multiple pages, strong conversions, full brand presence.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Bis zu 5 Seiten (individuell)</span><span class="lang-en">Up to 5 pages (custom)</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Premium UI/UX-Design</span><span class="lang-en">Premium UI/UX design</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Animationen und Microinteractions</span><span class="lang-en">Animations and microinteractions</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Erweitertes SEO-Setup</span><span class="lang-en">Advanced SEO setup</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Analytics und Conversion-Tracking</span><span class="lang-en">Analytics and conversion tracking</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">1 Monat Support inklusive</span><span class="lang-en">1 month support included</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-primary pricing-cta"><span class="lang-de">Jetzt anfragen</span><span class="lang-en">Get in touch</span></a>
+      </div>
+
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-tier">Enterprise</div>
+        <div class="pricing-name">Enterprise</div>
+        <div class="pricing-price">
+          <span class="lang-de" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Individuell</span>
+          <span class="lang-en" style="font-size:clamp(18px,2.2vw,26px);letter-spacing:0">Bespoke</span>
+        </div>
+        <p class="pricing-desc lang-de">Massgeschneiderte Lösungen für etablierte Unternehmen mit komplexen Anforderungen und langfristiger Partnerschaft.</p>
+        <p class="pricing-desc lang-en">Bespoke solutions for established businesses with complex requirements and long-term partnerships.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Unbegrenzte Seiten und Funktionen</span><span class="lang-en">Unlimited pages and features</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Custom Webentwicklung</span><span class="lang-en">Custom web development</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">CMS und Shop-Integration</span><span class="lang-en">CMS and shop integration</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Laufende Betreuung</span><span class="lang-en">Ongoing maintenance</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="pricing-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 3.5,8 8.5,2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="lang-de">Strategische Beratung</span><span class="lang-en">Strategic consulting</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline pricing-cta"><span class="lang-de">Anfrage stellen</span><span class="lang-en">Request quote</span></a>
+      </div>
+
+    </div>
+
+    <div class="pricing-note reveal reveal-delay-4">
+      <span class="lang-de"><strong>Alle Details werden persönlich besprochen.</strong> Schreib uns an und wir finden gemeinsam das richtige Paket für dein Budget und deine Ziele.</span>
+      <span class="lang-en"><strong>All details are discussed personally.</strong> Just reach out and we'll find the right package for your budget and goals together.</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-inner">
+
+      <div class="reveal">
+        <div class="section-label lang-de">FAQ</div>
+        <div class="section-label lang-en">FAQ</div>
+        <h2 class="section-title lang-de">Häufige<br><span>Fragen.</span></h2>
+        <h2 class="section-title lang-en">Common<br><span>Questions.</span></h2>
+        <p class="section-sub lang-de">Alles, was du wissen musst. Ehrlich und auf den Punkt.</p>
+        <p class="section-sub lang-en">Everything you need to know. Honest and to the point.</p>
+      </div>
+
+      <div class="faq-list reveal reveal-delay-2">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Wie läuft ein Projekt mit euch ab?</span>
+            <span class="lang-en">How does a project with you work?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">Der Prozess ist simpel: Du kontaktierst uns per E-Mail oder Instagram. Wir besprechen dein Projekt und deine Ziele. Du erhältst ein individuelles Angebot. Nach Freigabe starten wir sofort. Du erhältst regelmässige Updates bis zum Launch.</span>
+            <span class="lang-en">The process is simple: You contact us via email or Instagram. We discuss your project and goals. You receive a custom quote. After approval we start immediately. You receive regular updates until launch.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Wie lange dauert die Entwicklung?</span>
+            <span class="lang-en">How long does development take?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">Eine einfache Landing Page ist in 7 bis 14 Tagen fertig. Komplexere Projekte dauern typischerweise 3 bis 6 Wochen. Du erhältst von Anfang an eine konkrete Zeitplanung, keine vagen Versprechen.</span>
+            <span class="lang-en">A simple landing page is ready in 7 to 14 days. More complex projects typically take 3 to 6 weeks. You'll receive a concrete timeline from the start, no vague promises.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Was kostet eine Webseite wirklich?</span>
+            <span class="lang-en">What does a website really cost?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">Der Starter-Plan beginnt ab 99 Euro pro Monat. Komplexere Projekte werden individuell kalkuliert. Wir sind transparent: Kein Angebot, das sich nachher verdoppelt. Was vereinbart ist, gilt.</span>
+            <span class="lang-en">The Starter plan begins from 99 Euro per month. More complex projects are individually priced. We're transparent: no quote that doubles later. What's agreed is what you pay.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Kann ich Änderungen nach dem Launch beantragen?</span>
+            <span class="lang-en">Can I request changes after launch?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">Ja. Feedback-Runden sind fest eingeplant. Kleinere Änderungen nach Launch sind im Growth-Paket mit einem Monat Support abgedeckt. Größere Erweiterungen können als separate Leistung vereinbart werden.</span>
+            <span class="lang-en">Yes. Feedback rounds are built into every project. Minor post-launch changes are covered within the Growth package's one-month support. Larger extensions can be agreed as a separate service.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Mit welchen Technologien arbeitet ihr?</span>
+            <span class="lang-en">What technologies do you work with?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">Wir arbeiten mit HTML5, CSS3, JavaScript, React, Next.js und verschiedenen CMS-Systemen wie WordPress, Webflow und Sanity. Wir empfehlen die Technologie, die am besten zu deinem Projekt passt.</span>
+            <span class="lang-en">We work with HTML5, CSS3, JavaScript, React, Next.js, and various CMS systems such as WordPress, Webflow, and Sanity. We recommend the technology that best fits your project.</span>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="lang-de">Wer ist hinter ShopMiraway?</span>
+            <span class="lang-en">Who is behind ShopMiraway?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <span class="lang-de">ShopMiraway ist eine Berliner Webdesign-Agentur, geführt von einem erfahrenen Designer und Entwickler. Wir arbeiten bewusst anonym, weil wir glauben: Die Arbeit spricht lauter als jede persönliche Selbstvermarktung.</span>
+            <span class="lang-en">ShopMiraway is a Berlin-based web design agency, led by an experienced designer and developer. We work intentionally anonymous because we believe: the work speaks louder than any personal self-promotion.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     KONTAKT
+════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+
+      <div class="reveal">
+        <div class="about-label lang-de">Kontakt aufnehmen</div>
+        <div class="about-label lang-en">Get in touch</div>
+        <h2 class="contact-title lang-de">Bereit für deine<br>neue Webseite?</h2>
+        <h2 class="contact-title lang-en">Ready for your<br>new website?</h2>
+        <p class="contact-sub lang-de">Schreib uns einfach. Kein Verkaufsgespräch, keine Verpflichtung. Wir schauen gemeinsam, ob und wie wir dir helfen können.</p>
+        <p class="contact-sub lang-en">Just reach out. No sales call, no obligation. Let's see together if and how we can help you.</p>
+
+        <div class="contact-channels">
+          <a href="mailto:igde.69@web.de" class="contact-channel">
+            <div class="contact-channel-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-channel-label lang-de">E-Mail</div>
+              <div class="contact-channel-label lang-en">Email</div>
+              <div class="contact-channel-value">igde.69@web.de</div>
+            </div>
+          </a>
+          <a href="https://instagram.com/shopmiraway" target="_blank" rel="noopener" class="contact-channel">
+            <div class="contact-channel-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <div class="contact-channel-label">Instagram</div>
+              <div class="contact-channel-value">@shopmiraway</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <div class="form-title lang-de">Nachricht schreiben</div>
+        <div class="form-title lang-en">Send a message</div>
+
+        <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Max Mustermann" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label lang-de" for="email">E-Mail-Adresse</label>
+            <label class="form-label lang-en" for="email">Email address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="max@beispiel.de" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label lang-de" for="message">Deine Nachricht</label>
+            <label class="form-label lang-en" for="message">Your message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Erzähl uns von deinem Projekt. Was brauchst du, was ist dein Ziel?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span class="lang-de">Nachricht senden</span>
+            <span class="lang-en">Send message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="lang-de">Nachricht gesendet. Wir melden uns innerhalb von 24 Stunden.</span>
+          <span class="lang-en">Message sent. We'll get back to you within 24 hours.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-logo">ShopMiraway<span class="logo-dot"></span></div>
+        <p class="footer-tagline lang-de">Berliner Webdesign-Agentur für massgeschneiderte digitale Erfahrungen, die Ergebnisse liefern.</p>
+        <p class="footer-tagline lang-en">Berlin web design agency for bespoke digital experiences that deliver results.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/shopmiraway" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="mailto:igde.69@web.de" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title lang-de">Navigation</div>
+        <div class="footer-col-title lang-en">Navigation</div>
+        <div class="footer-links">
+          <a href="#services"><span class="lang-de">Leistungen</span><span class="lang-en">Services</span></a>
+          <a href="#pricing"><span class="lang-de">Preise</span><span class="lang-en">Pricing</span></a>
+          <a href="#about"><span class="lang-de">Über uns</span><span class="lang-en">About</span></a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact"><span class="lang-de">Kontakt</span><span class="lang-en">Contact</span></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title lang-de">Kontakt</div>
+        <div class="footer-col-title lang-en">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:igde.69@web.de">igde.69@web.de</a>
+          <a href="https://instagram.com/shopmiraway" target="_blank" rel="noopener">@shopmiraway</a>
+          <a href="#" onclick="return false;"><span class="lang-de">Berlin, Deutschland</span><span class="lang-en">Berlin, Germany</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy lang-de">2025 ShopMiraway. Alle Rechte vorbehalten.</div>
+      <div class="footer-copy lang-en">2025 ShopMiraway. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#"><span class="lang-de">Impressum</span><span class="lang-en">Legal Notice</span></a>
+        <a href="#"><span class="lang-de">Datenschutz</span><span class="lang-en">Privacy Policy</span></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
